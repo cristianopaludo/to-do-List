@@ -1,0 +1,177 @@
+:root {
+  --text: 'Handlee', cursive;
+  --title: 'Kavivanar', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #fdf6a5;
+}
+
+main {
+  width: 80vw;
+  min-height: 100vh;
+  margin: auto;
+  padding-left: 4px;
+  border-left: 1px solid #fda5a5;
+}
+
+h1 {
+  font-family: var(--title);
+  color: #D27C2C;
+}
+
+button {
+  font-family: var(--title);
+  border: none;
+  background-color: transparent;
+}
+
+/* CONTAINER ITEM ------------------------------------------------- */
+.container {
+  margin-top: 12px;
+  padding-bottom: 24px;
+  border-bottom: 2px dotted #D27C2C;
+}
+
+.list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-header {
+  display: flex;
+}
+
+.list-header h2 {
+  margin-right: 12px;
+  font-family: var(--title);
+}
+
+ .list-header .delete-item {
+  transform: translateY(4px);
+}
+
+.delete-item {
+  display: none; /* Manipular com JS */ 
+}
+
+.edit-items {
+  font-size: 16px;
+  font-weight: 700;
+  color: #D27C2C;
+}
+
+li {
+  position: relative;
+}
+
+/* TO DO ITEM -------- */
+.to-do-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.item-container {
+  display: flex;
+}
+
+.check-field {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #D27C2C;
+  border-radius: 50%;
+}
+
+.to-do-item p {
+  margin: 0 8px;
+  font-family: var(--text);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* COMPLETED ITEMS ------------------------------------------------- */
+.completed {
+  font-family: var(--title);
+  color: #777;
+}
+
+.completed h3 {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.checked-item {
+  display: block; /* Always checked when completed */
+  transform: translateY(-5px);
+}
+
+.completed p {
+  text-decoration: line-through;
+}
+
+/* ADD ITEM ------------------------------------------------- */
+.add-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
+.new-item-field {
+  position: relative;
+  display: none; /* deve ser none (block no JS) */
+}
+
+.add-item-input {
+  width: 100%;
+  padding: 2px 48px 2px 8px;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid #D27C2C;
+  border-radius: 12px;
+  background-color: #fffac3;
+}
+
+.submit-new-item {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 100%;
+  border: 2px solid #D27C2C;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #D27C2C;
+}
+
+.add-item-btn {
+  width: 48px;
+  margin: auto;
+  border: 2px solid #D27C2C;
+  border-radius: 12px;
+}
+
+/* CREATE NEW LIST ---------------------------------------- */
+.create-new-list-btn {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 24px auto;
+  padding: 4px 12px;
+  border: 2px solid #D27C2C;
+  border-radius: 12px;
+  color: #D27C2C;
+}
