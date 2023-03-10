@@ -34,6 +34,18 @@ button {
   background-color: transparent;
 }
 
+svg {
+  pointer-events: none; /* oriented by ChatGPT, so now I can target the event listener to the button instead svg */
+}
+
+/* HEADER ------------------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+
 /* CONTAINER ITEM ------------------------------------------------- */
 .container {
   margin-top: 12px;
@@ -43,30 +55,23 @@ button {
 
 .list-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 12px;
 }
 
-.list-header {
-  display: flex;
-}
-
-.list-header h2 {
-  margin-right: 12px;
+input.list-title-inpt {
   font-family: var(--title);
-}
-
- .list-header .delete-item {
-  transform: translateY(4px);
-}
-
-.delete-item {
-  display: none; /* Manipular com JS */ 
-}
-
-.edit-items {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
-  color: #D27C2C;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+ .list-container .delete-list-container {
+  transform: translateY(4px);
+  scale: 1.3
 }
 
 li {
@@ -92,11 +97,15 @@ li {
   border-radius: 50%;
 }
 
-.to-do-item p {
+input.list-item-inpt {
+  width: 235px;
   margin: 0 8px;
   font-family: var(--text);
   font-size: 18px;
   font-weight: 400;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
 /* COMPLETED ITEMS ------------------------------------------------- */
@@ -116,47 +125,32 @@ li {
   transform: translateY(-5px);
 }
 
-.completed p {
+.completed input {
   text-decoration: line-through;
+  font-style: italic;
+  color: #777;
 }
 
-/* ADD ITEM ------------------------------------------------- */
-.add-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* background-color: aqua; */
+/* BUTTONS ------------------------------------------------- */
+.delete-btn {
+  visibility: hidden;
 }
 
-.new-item-field {
-  position: relative;
-  display: none; /* deve ser none (block no JS) */
-}
-
-.add-item-input {
-  width: 100%;
-  padding: 2px 48px 2px 8px;
-  font-size: 18px;
-  font-weight: 400;
-  border: 1px solid #D27C2C;
-  border-radius: 12px;
-  background-color: #fffac3;
-}
-
-.submit-new-item {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 50px;
-  height: 100%;
-  border: 2px solid #D27C2C;
-  border-radius: 12px;
+.edit-items {
+  font-size: 16px;
   font-weight: 700;
   color: #D27C2C;
 }
 
+button.freeze,
+div.freeze {
+  opacity: 0.5;
+}
+
+/* ADD ITEM ------------------------------------------------- */
 .add-item-btn {
+  content: 'ZZZZZZ';
+  display: block;
   width: 48px;
   margin: auto;
   border: 2px solid #D27C2C;
@@ -175,3 +169,5 @@ li {
   border-radius: 12px;
   color: #D27C2C;
 }
+
+
