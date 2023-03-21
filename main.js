@@ -38,7 +38,7 @@ createNewListBtn.addEventListener('click', () => {
 
   <!-- Completed List -->
   <div class="completed">
-    <h3>Completed <spam>(0)</spam></h3>
+    <h3>Completed (<spam>0</spam>)</h3>
     <ul>
     </ul>
   </div>
@@ -147,12 +147,28 @@ function freezeButtons() {
 
 // === Delete button ===
 function deleteElement(event) {
+  // Parent element of the clicked button
   let parentElement = event.target.parentNode
+  
+  // depending on which delete button it was clicked (uncheck list vs completed list)
+  let ul = parentElement.parentNode 
+  
+  // it can be the main container (.container) or the completed div (.completed)
+  let container = ul.parentNode
 
   if (parentElement.className === 'list-container') {
     parentElement.parentNode.remove()
-  } else {
+  } else { 
     parentElement.remove()
+
+    // If the deleted list item is into completed list, it will also update the completed value
+    if (container.className === 'completed') {
+      const completedItemsList = document.querySelector('.completed>ul')
+      const completedCounter = completedItemsList.children.length
+      const completedCounterElement = document.querySelector('.completed spam')
+
+      updateCompleteList(completedCounterElement, completedCounter)
+    }
   }
 }
 
