@@ -10,13 +10,14 @@
 }
 
 body {
-  width: 100vw;
+  max-width: 500px;
   min-height: 100vh;
+  margin: auto;
   background-color: #fdf6a5;
 }
 
 main {
-  width: 80vw;
+  width: 80%;
   min-height: 100vh;
   margin: auto;
   padding-left: 4px;

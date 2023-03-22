@@ -155,6 +155,7 @@ function deleteElement(event) {
   
   // it can be the main container (.container) or the completed div (.completed)
   let container = ul.parentNode
+  let parentID = container.parentNode.id
 
   if (parentElement.className === 'list-container') {
     parentElement.parentNode.remove()
@@ -163,9 +164,9 @@ function deleteElement(event) {
 
     // If the deleted list item is into completed list, it will also update the completed value
     if (container.className === 'completed') {
-      const completedItemsList = document.querySelector('.completed>ul')
+      const completedItemsList = document.querySelector(`#${parentID} .completed>ul`)
       const completedCounter = completedItemsList.children.length
-      const completedCounterElement = document.querySelector('.completed spam')
+      const completedCounterElement = document.querySelector(`#${parentID} .completed spam`)
 
       updateCompleteList(completedCounterElement, completedCounter)
     }
