@@ -12,9 +12,9 @@ Abaixo, listei algumas funcionalidades programadas das quais foram implementadas
 - [x] Botão de adicionar um novo item na lista
     > Injeta via JS um novo item na lista com a estrutura completa do HTML
 - [x] Botão para excluir uma lista ou um item da lista
-        > Quando pressionado, congela a interação com a lista (exceto os botões de deletar) até pressionar o botão Done (muda dinamicamente)
+    > Quando pressionado, congela a interação com a lista (exceto os botões de deletar) até pressionar o botão Done (muda dinamicamente)
 - [x] Botão 'check' personalizado
-        > Quando pressionado, muda o item da lista para a lista dos itens completados
+    > Quando pressionado, muda o item da lista para a lista dos itens completados
 
 
 ***
