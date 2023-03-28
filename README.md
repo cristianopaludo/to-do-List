@@ -1,7 +1,8 @@
 # To Do List
 
-Com o objetivo de aprimorar as habilidades de manipulação da DOM, este projeto foi um desafio que me propus a fazer. 
-Abaixo, listei algumas funcionalidades programadas das quais foram implementadas por mim e também coloquei algumas intenções de melhorias que pretendo ir adicionando conforme vou praticando e me aprofundando no conteúdo do curso.
+Com o objetivo de aprimorar as habilidades de manipulação da DOM, este projeto foi um desafio que me propus a fazer.
+
+Abaixo, listei algumas funcionalidades programadas das quais foram implementadas por mim e também coloquei algumas intenções de melhorias que pretendo ir adicionando no futuro.
 
 ***
 
