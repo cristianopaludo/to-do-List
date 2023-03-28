@@ -23,6 +23,7 @@ Abaixo, listei algumas funcionalidades programadas das quais foram implementadas
 - [ ] Criar o local Storage
 - [ ] Melhorar a responsividade
 
+***
 
 Obrigado por ter lido até aqui!
 
